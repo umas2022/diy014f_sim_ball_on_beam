@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>a01_balance_sim</name>
+  <version>0.0.0</version>
+  <description>Gazebo Sim integration package for the a01 balance ball-on-beam robot.</description>
+  <maintainer email="1970313791@qq.com">umas</maintainer>
+  <license>TODO: License declaration</license>
+
+  <depend>a01_balance_1dof</depend>
+  <depend>a01_balance_control</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>ros_gz_bridge</depend>
+  <depend>ros_gz_sim</depend>
+  <depend>rosgraph_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>xacro</depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

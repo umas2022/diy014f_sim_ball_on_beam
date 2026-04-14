@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="a01_balance_1dof">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00106343239011507 5.85545725779782E-18 0.00580359362821475"
+        rpy="0 0 0" />
+      <mass
+        value="0.50228318530718" />
+      <inertia
+        ixx="0.000412277095965459"
+        ixy="2.74068363995885E-20"
+        ixz="9.0447164254581E-06"
+        iyy="0.000168633359120358"
+        iyz="-3.59318872793803E-21"
+        izz="0.000556701469637907" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://a01_balance_1dof/meshes/visual/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://a01_balance_1dof/meshes/collision/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="track">
+    <inertial>
+      <origin
+        xyz="0.019644889683078 -1.44050434061854E-17 -0.00132545061482008"
+        rpy="0 0 0" />
+      <mass
+        value="0.0197235920581627" />
+      <inertia
+        ixx="1.6234036872221E-05"
+        ixy="-2.62014793277014E-21"
+        ixz="8.9048961031769E-09"
+        iyy="2.19211207038962E-06"
+        iyz="1.62226521198398E-21"
+        izz="1.81681471028436E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://a01_balance_1dof/meshes/visual/track.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://a01_balance_1dof/meshes/collision/track.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_track"
+    type="revolute">
+    <origin
+      xyz="-0.015006 0 0.029997"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="track" />
+    <axis
+      xyz="1 0 0.00021492" />
+    <limit
+      lower="-0.13"
+      upper="0.13"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="ball">
+    <inertial>
+      <origin
+        xyz="-5.20417042793042E-17 -2.0937362746534E-18 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.113097335529233" />
+      <inertia
+        ixx="1.01787601976309E-05"
+        ixy="-2.10654947922633E-24"
+        ixz="3.17637355220363E-22"
+        iyy="1.01787601976309E-05"
+        iyz="1.15183380038738E-23"
+        izz="1.01787601976309E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://a01_balance_1dof/meshes/visual/ball.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://a01_balance_1dof/meshes/collision/ball.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_ball"
+    type="prismatic">
+    <origin
+      xyz="0.019997 0 0.014004"
+      rpy="0 0 0" />
+    <parent
+      link="track" />
+    <child
+      link="ball" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.05"
+      upper="0.05"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

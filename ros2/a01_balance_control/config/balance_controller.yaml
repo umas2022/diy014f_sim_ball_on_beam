@@ -1,0 +1,22 @@
+/**:
+  ros__parameters:
+    control_rate: 100.0
+    ball_pos_ref: 0.0
+    ball_pos_kp: 2.6
+    ball_vel_kd: 1.1
+    control_sign: 1.0
+    track_angle_kp: 8.0
+    track_rate_kd: 0.55
+    max_track_angle: 0.10
+    max_track_velocity: 2.2
+    command_alpha: 0.18
+    max_cmd_step: 0.20
+    ball_pos_alpha: 0.20
+    ball_vel_alpha: 0.18
+    track_angle_alpha: 0.20
+    track_rate_alpha: 0.16
+    track_angle_limit_for_stop: 0.22
+    joint_states_topic: /joint_states
+    track_cmd_topic: /model/a01_balance/joint/joint_track/cmd_vel
+    track_joint_name: joint_track
+    ball_joint_name: joint_ball

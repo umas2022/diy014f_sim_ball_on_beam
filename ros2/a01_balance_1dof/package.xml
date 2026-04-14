@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>a01_balance_1dof</name>
+  <version>1.0.0</version>
+  <description>URDF description package for the a01 balance ball-on-beam robot.</description>
+  <maintainer email="1970313791@qq.com">umas</maintainer>
+  <license>BSD</license>
+
+  <depend>joint_state_publisher_gui</depend>
+  <depend>launch_ros</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>rviz2</depend>
+  <depend>xacro</depend>
+
+  <export>
+    <architecture_independent />
+    <build_type>ament_python</build_type>
+  </export>
+</package>

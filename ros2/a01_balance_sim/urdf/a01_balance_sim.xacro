@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="a01_balance">
+
+  <xacro:include filename="$(find a01_balance_1dof)/urdf/a01_balance_1dof.xacro"/>
+
+  <gazebo reference="track">
+    <sensor name="track_imu" type="imu">
+      <always_on>true</always_on>
+      <update_rate>200</update_rate>
+      <topic>/imu</topic>
+      <visualize>false</visualize>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="track">
+    <mu1>0.45</mu1>
+    <mu2>0.45</mu2>
+  </gazebo>
+
+  <gazebo reference="ball">
+    <mu1>0.45</mu1>
+    <mu2>0.45</mu2>
+  </gazebo>
+
+  <gazebo>
+    <plugin
+      filename="gz-sim-joint-state-publisher-system"
+      name="gz::sim::systems::JointStatePublisher"/>
+  </gazebo>
+
+  <gazebo>
+    <plugin
+      filename="gz-sim-joint-controller-system"
+      name="gz::sim::systems::JointController">
+      <joint_name>joint_track</joint_name>
+      <use_force_commands>false</use_force_commands>
+      <p_gain>1.6</p_gain>
+      <i_gain>0.08</i_gain>
+      <d_gain>0.02</d_gain>
+      <i_max>0.6</i_max>
+      <i_min>-0.6</i_min>
+      <cmd_max>6.0</cmd_max>
+      <cmd_min>-6.0</cmd_min>
+    </plugin>
+  </gazebo>
+
+</robot>
