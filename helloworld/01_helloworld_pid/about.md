@@ -1,5 +1,7 @@
 # Ball-on-Beam PID 入门讲解
 
+这里的 `PID` 全名是 `Proportional-Integral-Derivative`，也就是比例-积分-微分控制。
+
 这个目录放的是球杆系统的一个最小 PID 入门示例，对应脚本是 `hello_pid.py`。  
 目标不是把真实系统完整建模，而是用尽量少的代码讲清楚三件事：
 

@@ -1,5 +1,7 @@
 # Sliding Mode Control Hello World
 
+这里的 `SMC` 全名是 `Sliding Mode Control`，也就是滑模控制。
+
 滑模控制 SMC 的核心特点是：
 
 - 对模型不确定性比较鲁棒

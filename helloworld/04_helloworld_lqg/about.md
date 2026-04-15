@@ -1,5 +1,7 @@
 # LQG Hello World
 
+这里的 `LQG` 全名是 `Linear Quadratic Gaussian`。
+
 `LQG` 可以先用一句话概括：
 
 - `LQR` 负责控制
